@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Clínica Odontológica Multidisciplinar Premium em Nova Iguaçu. Atendimento familiar de alto padrão, tecnologia avançada e estética exclusiva.">
+    <title>Clínica Odontológica Premium | Nova Iguaçu</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ==========================================================================
+           DESIGN TOKENS & RESET
+           ========================================================================== */
+        :root {
+            --color-primary-dark: #0B131F;
+            --color-primary-medium: #142235;
+            --color-accent-gold: #D4AF37;
+            --color-gold-dark: #AA7C11;
+            --color-text-light: #F5F7FA;
+            --color-text-muted: #9AA5B5;
+            --color-bg-pure: #060A10;
+            --max-width: 1200px;
+            --transition-premium: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            width: 100%;
+            overflow-x: hidden;
+            background-color: var(--color-bg-pure);
+            color: var(--color-text-light);
+            font-family: 'Montserrat', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, .logo-title {
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-padding {
+            padding: 64px 0;
+        }
+
+        .gold-text {
+            color: var(--color-accent-gold);
+            background: linear-gradient(135deg, #D4AF37 0%, #FFF5D6 50%, #AA7C11 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .mesh-gradient-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            background: radial-gradient(circle at 80% 20%, #142235 0%, transparent 45%);
+            z-index: -2;
+            opacity: 0.6;
+        }
+
+        /* Components */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 24px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition-premium);
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--color-accent-gold) 0%, var(--color-gold-dark) 100%);
+            color: var(--color-primary-dark);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--color-text-light);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .btn-pricing-whatsapp {
+            width: 100%;
+            margin-top: auto;
+        }
+
+        /* Header / Navbar */
+        .header-main {
+            position: fixed;
+            top: 0; left: 0; width: 100%;
+            z-index: 100;
+            background: #060A10;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .nav-container {
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand-logo .logo-title {
+            font-size: 1.2rem;
+            color: var(--color-text-light);
+            text-decoration: none;
+        }
+
+        .nav-desktop .nav-list {
+            display: flex;
+            list-style: none;
+            gap: 24px;
+        }
+
+        .nav-link {
+            color: var(--color-text-muted);
+            text-decoration: none;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none; border: none; cursor: pointer;
+            width: 24px; height: 24px; position: relative;
+        }
+
+        .hamburger, .hamburger::before, .hamburger::after {
+            content: ""; display: block; background: #fff;
+            width: 24px; height: 2px; position: absolute; transition: 0.3s;
+        }
+        .hamburger { top: 11px; }
+        .hamburger::before { top: -8px; }
+        .hamburger::after { top: 8px; }
+
+        /* Hero */
+        .hero-section {
+            padding-top: 140px;
+            padding-bottom: 48px;
+            text-align: center;
+        }
+
+        .badge-premium {
+            display: inline-block;
+            padding: 6px 12px;
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid var(--color-accent-gold);
+            color: var(--color-accent-gold);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .hero-headline {
+            font-size: 2rem;
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+        .hero-subheadline {
+            font-size: 0.95rem;
+            color: var(--color-text-muted);
+            line-height: 1.5;
+            margin-bottom: 32px;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        /* Sections common styling */
+        .section-header h2 { font-size: 1.6rem; margin-bottom: 12px; text-align: center;}
+        .section-header p { text-align: center; color: var(--color-text-muted); font-size: 0.9rem; }
+
+        .comparison-grid, .features-grid, .steps-container, .pricing-grid, .testimonials-grid {
+            display: grid; grid-template-columns: 1fr; gap: 20px; margin-top: 32px;
+        }
+
+        .comparison-card, .feature-item, .step-card, .price-card, .testimonial-card {
+            background: rgba(20, 34, 53, 0.2);
+            border: 1px solid rgba(255,255,255,0.05);
+            padding: 24px;
+        }
+
+        .card-good, .price-card.recommended { border-color: var(--color-accent-gold); }
+        .comparison-card ul { list-style: none; margin-top: 16px;}
+        .comparison-card li { margin-bottom: 8px; font-size: 0.9rem;}
+
+        /* Trust Strip */
+        .trust-strip { background: rgba(20, 34, 53, 0.3); padding: 24px 0; }
+        .trust-title { text-align: center; font-size: 0.65rem; color: var(--color-text-muted); margin-bottom: 12px; letter-spacing: 1px; }
+        .trust-logos { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; font-size: 0.8rem; color: var(--color-text-muted); }
+
+        /* Pricing Toggle */
+        .toggle-container { display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 16px; font-size: 0.85rem;}
+        .toggle-btn { width: 44px; height: 22px; background: #142235; border-radius: 11px; border: 1px solid rgba(255,255,255,0.1); position: relative; cursor: pointer;}
+        .toggle-btn::after { content: ""; position: absolute; top: 2px; left: 2px; width: 16px; height: 16px; background: var(--color-accent-gold); border-radius: 50%; transition: 0.3s;}
+        .toggle-btn.active::after { left: 24px; }
+        .price-value { font-size: 2rem; font-weight: bold; margin: 16px 0; text-align: center;}
+        .price-card ul { list-style: none; margin-bottom: 24px;}
+        .price-card li { font-size: 0.85rem; margin-bottom: 8px; color: var(--color-text-muted);}
+
+        /* FAQ */
+        .faq-item { margin-bottom: 12px; background: rgba(20, 34, 53, 0.2); border: 1px solid rgba(255,255,255,0.05);}
+        .faq-item summary { padding: 16px; cursor: pointer; font-weight: 500; font-size: 0.95rem;}
+        .faq-content { padding: 16px; color: var(--color-text-muted); font-size: 0.9rem;}
+
+        /* Footer */
+        .footer-main { background: #04070c; padding: 40px 0 20px 0; border-top: 1px solid rgba(255,255,255,0.05); text-align: center;}
+        .footer-grid { display: grid; grid-template-columns: 1fr; gap: 24px; margin-bottom: 30px;}
+
+        /* Lock Modal */
+        .modal-lock-overlay {
+            position: fixed; top:0; left:0; width:100vw; height:100vh; background: rgba(4,7,12,0.95);
+            z-index: 1000; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.3s;
+        }
+        .modal-lock-overlay.active { opacity: 1; pointer-events: auto; }
+        .modal-lock-content { background: #0B131F; border: 1px solid var(--color-accent-gold); padding: 32px 20px; max-width: 400px; width: 90%; text-align: center;}
+        .lock-status-box { background: rgba(255,255,255,0.03); border-left: 3px solid var(--color-accent-gold); padding: 12px; margin: 16px 0; font-size: 0.85rem; text-align: left;}
+
+        /* Responsive Layout Overrides */
+        @media (min-width: 769px) {
+            .menu-toggle { display: none; }
+            .hero-section { text-align: left; padding: 200px 0 100px 0; }
+            .hero-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+            .hero-cta-group { flex-direction: row; }
+            .comparison-grid { grid-template-columns: 1fr 1fr; }
+            .features-grid, .pricing-grid { grid-template-columns: repeat(3, 1fr); }
+            .footer-grid { grid-template-columns: repeat(3, 1fr); text-align: left; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-desktop, .btn-nav { display: none; }
+            .menu-toggle { display: block; }
+            .menu-mobile-overlay {
+                position: fixed; top: 70px; left: 0; width: 100%; height: calc(100vh - 70px);
+                background: #060A10; z-index: 99; display: none; padding: 40px 20px;
+            }
+            .menu-mobile-overlay.active { display: block; }
+            .nav-list-mobile { list-style: none; display: flex; flex-direction: column; gap: 24px; }
+            .mobile-link { color: #fff; text-decoration: none; font-size: 1.2rem; font-weight: 500; display: block;}
+        }
+    </style>
+</head>
+<body>
+
+    <div class="mesh-gradient-bg" aria-hidden="true"></div>
+
+    <!-- NAVBAR -->
+    <header class="header-main">
+        <div class="container nav-container">
+            <a href="#" class="brand-logo">
+                <span class="logo-title">ORAL<span class="gold-text">COUTURE</span></span>
+            </a>
+            <nav class="nav-desktop" aria-label="Navegação Principal">
+                <ul class="nav-list">
+                    <li><a href="#problem" class="nav-link">O Conceito</a></li>
+                    <li><a href="#features" class="nav-link">Especialidades</a></li>
+                    <li><a href="#pricing" class="nav-link">Planos</a></li>
+                    <li><a href="#faq" class="nav-link">FAQ</a></li>
+                </ul>
+            </nav>
+            <button class="btn btn-primary btn-nav trigger-lock">Agendar Consulta</button>
+            <button class="menu-toggle" aria-label="Menu">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div class="menu-mobile-overlay">
+        <nav class="nav-mobile">
+            <ul class="nav-list-mobile">
+                <li><a href="#problem" class="mobile-link">O Conceito</a></li>
+                <li><a href="#features" class="mobile-link">Especialidades</a></li>
+                <li><a href="#pricing" class="mobile-link">Planos</a></li>
+                <li><a href="#faq" class="mobile-link">FAQ</a></li>
+                <li><button class="btn btn-primary trigger-lock" style="width:100%; margin-top: 20px;">Agendar Atendimento</button></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero-section">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <div class="badge-premium">Nova Iguaçu • Alta Odontologia</div>
+                    <h1 class="hero-headline">O sorriso da sua família moldado por <span class="gold-text">especialistas</span>.</h1>
+                    <p class="hero-subheadline">Uma experiência multidisciplinar sob medida para o público Classe A. Cuidado integral, do preventivo infantil à estética avançada com conforto absoluto.</p>
+                    <div class="hero-cta-group">
+                        <button class="btn btn-primary trigger-lock">Reservar Atendimento VIP</button>
+                        <a href="#features" class="btn btn-secondary">Especialidades</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRUST STRIP -->
+        <section class="trust-strip">
+            <div class="container">
+                <p class="trust-title">TECNOLOGIA INTEGRADA E CERTIFICAÇÕES</p>
+                <div class="trust-logos">
+                    <span>Premium Doctoralia 2026</span>
+                    <span>Alinhadores Invisalign®</span>
+                    <span>Conselho Regional CRO-RJ</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROBLEMA -->
+        <section id="problem" class="problem-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2>A Diferença da Alta Odontologia</h2>
+                    <p>Por que famílias exigentes não aceitam mais a fricção de clínicas convencionais?</p>
+                </div>
+                <div class="comparison-grid">
+                    <div class="comparison-card card-bad">
+                        <h3>Clínicas Tradicionais</h3>
+                        <ul>
+                            <li>Tratamentos fragmentados sem sinergia.</li>
+                            <li>Ambiente barulhento e gerador de ansiedade.</li>
+                        </ul>
+                    </div>
+                    <div class="comparison-card card-good">
+                        <div class="gold-badge">Oral Couture</div>
+                        <h3>Nossa Abordagem</h3>
+                        <ul>
+                            <li>Corpo clínico completo coordenando o histórico familiar.</li>
+                            <li>Ambiente planejado com sedação consciente para zero dor.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURES -->
+        <section id="features" class="features-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Corpo Clínico Multidisciplinar</h2>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <h3>Odontopediatria Premium</h3>
+                        <p>Cuidado e prevenção para bebês e crianças em um ambiente lúdico e sem traumas.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Ortodontia & Invisíveis</h3>
+                        <p>Alinhadores estéticos de última geração planejados digitalmente por software 3D.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Reabilitação & Implantes</h3>
+                        <p>Carga imediata e pinos de titânio. Devolução do sorriso em até 72 horas sem enxerto.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRICING -> LINKANDO DIRETO PARA O WHATSAPP -->
+        <section id="pricing" class="pricing-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Planos de Saúde Bucal Integrada</h2>
+                    <p>A previsibilidade financeira aliada ao luxo médico contínuo.</p>
+                    <div class="toggle-container">
+                        <span>Semestral</span>
+                        <button class="toggle-btn" id="pricingToggle"></button>
+                        <span>Anual <small class="gold-text">(VIP)</small></span>
+                    </div>
+                </div>
+                <div class="pricing-grid">
+                    <div class="price-card">
+                        <h3>Essential Family</h3>
+                        <div class="price-value">R$ <span class="price-amount" data-semestral="240" data-anual="190">190</span><span class="price-period">/mês</span></div>
+                        <ul>
+                            <li>Check-up semestral digital completo</li>
+                            <li>Profilaxia avançada ultrassônica</li>
+                        </ul>
+                        <a href="https://api.whatsapp.com/send?phone=552126945611&text=Olá!%20Gostaria%20de%20saber%20mais%20e%20contratar%20o%20Plano%20Essential%20Family." target="_blank" class="btn btn-secondary btn-pricing-whatsapp">Contratar Essential</a>
+                    </div>
+                    <div class="price-card recommended">
+                        <h3>Couture Premium</h3>
+                        <div class="price-value">R$ <span class="price-amount" data-semestral="480" data-anual="390">390</span><span class="price-period">/mês</span></div>
+                        <ul>
+                            <li>Todos os benefícios do Essential</li>
+                            <li>Planejamento em Alinhadores Estéticos</li>
+                        </ul>
+                        <a href="https://api.whatsapp.com/send?phone=552126945611&text=Olá!%20Gostaria%20de%20saber%20mais%20e%20contratar%20o%20Plano%20Couture%20Premium." target="_blank" class="btn btn-primary btn-pricing-whatsapp">Contratar Couture Premium</a>
+                    </div>
+                    <div class="price-card">
+                        <h3>Executive Excellence</h3>
+                        <div class="price-value">R$ <span class="price-amount" data-semestral="890" data-anual="750">750</span><span class="price-period">/mês</span></div>
+                        <ul>
+                            <li>Clareamento a Laser anual incluso</li>
+                            <li>Acompanhamento prioritário pós-implante</li>
+                        </ul>
+                        <a href="https://api.whatsapp.com/send?phone=552126945611&text=Olá!%20Gostaria%20de%20saber%20mais%20e%20contratar%20o%20Plano%20Executive%20Excellence." target="_blank" class="btn btn-secondary btn-pricing-whatsapp">Contratar Executive</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="faq-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Dúvidas Frequentes</h2>
+                </div>
+                <div class="faq-container">
+                    <details class="faq-item">
+                        <summary>Vocês aceitam planos de saúde?</summary>
+                        <div class="faq-content">
+                            <p>Atendemos de forma particular com foco em excelência. Fornecemos documentação completa para solicitar reembolso nos planos premium.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-main">
+        <div class="container footer-grid">
+            <div>
+                <span class="logo-title">ORAL<span class="gold-text">COUTURE</span></span>
+          
