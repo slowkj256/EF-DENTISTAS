@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Clínica Odontológica Multidisciplinar Premium em Nova Iguaçu. Atendimento familiar de alto padrão, tecnologia avançada e estética exclusiva.">
+    <title>Clínica Odontológica Premium | Nova Iguaçu</title>
+    
+    <!-- Preload & Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animations.css">
+</head>
+<body>
+
+    <!-- Signature Background Element (Noise + Mesh Gradient) -->
+    <div class="mesh-gradient-bg" aria-hidden="true"></div>
+
+    <!-- 1. NAVBAR -->
+    <header class="header-main aria-sticky">
+        <div class="container nav-container">
+            <a href="#" class="brand-logo" aria-label="Home">
+                <span class="logo-title">ORAL<span class="gold-text">COUTURE</span></span>
+            </a>
+            <nav class="nav-desktop" aria-label="Navegação Principal">
+                <ul class="nav-list">
+                    <li><a href="#problem" class="nav-link">O Conceito</a></li>
+                    <li><a href="#features" class="nav-link">Especialidades</a></li>
+                    <li><a href="#how-it-works" class="nav-link">Experiência</a></li>
+                    <li><a href="#pricing" class="nav-link">Planos</a></li>
+                    <li><a href="#faq" class="nav-link">FAQ</a></li>
+                </ul>
+            </nav>
+            <button class="btn btn-primary btn-nav trigger-lock" aria-label="Agendar Consulta">Agendar Consulta</button>
+            <button class="menu-toggle" aria-label="Abrir Menu" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div class="menu-mobile-overlay" aria-hidden="true">
+        <nav class="nav-mobile" aria-label="Navegação Mobile">
+            <ul class="nav-list-mobile">
+                <li><a href="#problem" class="mobile-link">O Conceito</a></li>
+                <li><a href="#features" class="mobile-link">Especialidades</a></li>
+                <li><a href="#how-it-works" class="mobile-link">Experiência</a></li>
+                <li><a href="#pricing" class="mobile-link">Planos</a></li>
+                <li><a href="#faq" class="mobile-link">FAQ</a></li>
+                <li><button class="btn btn-primary trigger-lock" style="width:100%;">Agendar Consulta</button></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+        <!-- 2. HERO SECTION -->
+        <section class="hero-section">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <div class="badge-premium animate-fade-in">Nova Iguaçu • Alta Odontologia</div>
+                    <h1 class="hero-headline">O sorriso da sua família moldado por <span class="gold-text">especialistas</span> e alta tecnologia.</h1>
+                    <p class="hero-subheadline">Uma experiência multidisciplinar sob medida para o público Classe A. Cuidado integral, do preventivo infantil à estética avançada com conforto absoluto.</p>
+                    <div class="hero-cta-group">
+                        <button class="btn btn-primary trigger-lock">Reservar Atendimento VIP</button>
+                        <a href="#features" class="btn btn-secondary">Conhecer Especialidades</a>
+                    </div>
+                    <div class="hero-social-proof">
+                        <div class="avatar-group">
+                            <div class="avatar-mini" style="background:#1c2d42;">+900</div>
+                        </div>
+                        <p class="social-proof-text"><strong>+960 avaliações 5 estrelas</strong> no Google de famílias em Nova Iguaçu.</p>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-image-wrapper">
+                        <!-- Placeholder visual minimalista premium com SVG geométrico editorial -->
+                        <svg class="abstract-premium-svg" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#D4AF37"/>
+                                    <stop offset="100%" stop-color="#AA7C11"/>
+                                </linearGradient>
+                            </defs>
+                            <circle cx="250" cy="250" r="200" stroke="url(#goldGrad)" stroke-width="1" opacity="0.3"/>
+                            <path d="M150 300 C 200 220, 300 220, 350 300" stroke="url(#goldGrad)" stroke-width="3" stroke-linecap="round"/>
+                            <path d="M250 100 V 400" stroke="#ffffff" stroke-width="0.5" stroke-dasharray="5 5" opacity="0.2"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. TRUST STRIP (Logos/Integrações) -->
+        <section class="trust-strip">
+            <div class="container">
+                <p class="trust-title">TECNOLOGIA INTEGRADA E CERTIFICAÇÕES</p>
+                <div class="trust-logos">
+                    <span class="logo-item">Premium Doctoralia 2026</span>
+                    <span class="logo-item">Alinhadores Invisalign®</span>
+                    <span class="logo-item">Conselho Regional CRO-RJ</span>
+                    <span class="logo-item">Odontologia Digital 3D</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. PROBLEMA (Antes x Depois Visual) -->
+        <section id="problem" class="problem-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2>A Distância entre um Atendimento Clínico Comum e a Alta Odontologia</h2>
+                    <p>Por que famílias exigentes não aceitam mais a fricção de clínicas convencionais?</p>
+                </div>
+                <div class="comparison-grid">
+                    <div class="comparison-card card-bad">
+                        <h3>Clínicas Tradicionais</h3>
+                        <ul>
+                            <li>Tratamentos fragmentados com múltiplos dentistas sem sinergia.</li>
+                            <li>Ambiente frio, barulhento e gerador de ansiedade familiar.</li>
+                            <li>Retornos demorados por falta de tecnologia laboratorial interna.</li>
+                        </ul>
+                    </div>
+                    <div class="comparison-card card-good">
+                        <div class="gold-badge">Padrão Oral Couture</div>
+                        <h3>Nossa Abordagem Multidisciplinar</h3>
+                        <ul>
+                            <li>Corpo clínico completo coordenando o histórico da sua família em um só lugar.</li>
+                            <li>Ambiente projetado com isolamento acústico e sedação consciente para zero dor.</li>
+                            <li>Diagnósticos digitais e próteses/lentes em tempo recorde.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. FEATURES (Grid de Especialidades) -->
+        <section id="features" class="features-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Corpo Clínico Multidisciplinar Completo</h2>
+                    <p>Infraestrutura e especialistas prontos para cobrir todas as fases da vida sob o mesmo teto premium.</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-item reveal-on-scroll">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <h3>Odontopediatria Premium</h3>
+                        <p>Cuidado e prevenção para bebês e crianças em um ambiente lúdico, com técnicas avançadas de redução de fricção psicológica.</p>
+                    </div>
+                    <div class="feature-item reveal-on-scroll">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/></svg>
+                        </div>
+                        <h3>Ortodontia & Invisíveis</h3>
+                        <p>Alinhadores estéticos de última geração e aparelhos imperceptíveis planejados digitalmente por software 3D.</p>
+                    </div>
+                    <div class="feature-item reveal-on-scroll">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                        </div>
+                        <h3>Reabilitação & Implantes</h3>
+                        <p>Carga imediata e pinos de titânio de alta performance. Devolução da mastigação e estética em até 72 horas sem enxerto.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. COMO FUNCIONA -->
+        <section id="how-it-works" class="how-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2>A Jornada Premium Oral Couture</h2>
+                    <p>Como estruturamos sua primeira experiência conosco.</p>
+                </div>
+                <div class="steps-container">
+                    <div class="step-card">
+                        <div class="step-number">01</div>
+                        <h3>Check-up Digital Integrado</h3>
+                        <p>Escaneamento intraoral completo em 3D substituindo moldagens desconfortáveis antigas.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">02</div>
+                        <h3>Junta Multidisciplinar</h3>
+                        <p>Seu caso é avaliado em conjunto por especialistas de diferentes áreas para um plano ágil e assertivo.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">03</div>
+                        <h3>Sessão VIP Única</h3>
+                        <p>Execução concentrada de procedimentos sob sedação opcional para otimizar o tempo da sua família.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. PRICING -->
+        <section id="pricing" class="pricing-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Planos de Saúde Bucal Integrada</h2>
+                    <p>A previsibilidade financeira aliada ao luxo médico contínuo.</p>
+                    <div class="toggle-container">
+                        <span>Semestral</span>
+                        <button class="toggle-btn" id="pricingToggle" aria-label="Alterar periodicidade"></button>
+                        <span>Anual <small class="gold-text">(Benefícios VIP)</small></span>
+                    </div>
+                </div>
+                <div class="pricing-grid">
+                    <div class="price-card">
+                        <h3>Essential Family</h3>
+                        <p class="price-desc">Ideal para prevenção anual contínua.</p>
+                        <div class="price-value">R$ <span class="price-amount" data-semestral="240" data-anual="190">190</span><span class="price-period">/mês</span></div>
+                        <ul>
+                            <li>Check-up semestral digital completo</li>
+                            <li>Profilaxia e raspagem avançada ultrassônica</li>
+                            <li>Odontopediatria preventiva inclusa</li>
+                        </ul>
+                        <button class="btn btn-secondary trigger-lock">Solicitar Adesão</button>
+                    </div>
+                    <div class="price-card recommended">
+                        <div class="card-ribbon">Mais Procurado</div>
+                        <h3>Couture Premium Care</h3>
+                        <p class="price-desc">Cuidado avançado, estética e ortodontia preventiva.</p>
+                        <div class="price-value">R$ <span class="price-amount" data-semestral="480" data-anual="390">390</span><span class="price-period">/mês</span></div>
+                        <ul>
+                            <li>Todos os benefícios do Essential</li>
+                            <li>Planejamento e descontos em Alinhadores Estéticos</li>
+                            <li>Serviço de urgência concierge 24h via WhatsApp</li>
+                            <li>Spa Dental (Atendimento com Aromaterapia e Massagem)</li>
+                        </ul>
+                        <button class="btn btn-primary trigger-lock">Garantir Vaga Premium</button>
+                    </div>
+                    <div class="price-card">
+                        <h3>Executive Excellence</h3>
+                        <p class="price-desc">Para reabilitações extensas e transformações de sorriso.</p>
+                        <div class="price-value">R$ <span class="price-amount" data-semestral="890" data-anual="750">750</span><span class="price-period">/mês</span></div>
+                        <ul>
+                            <li>Clareamento a Laser anual incluso</li>
+                            <li>Acompanhamento prioritário pós-implante</li>
+                            <li>Sala VIP dedicada para o paciente e acompanhantes</li>
+                        </ul>
+                        <button class="btn btn-secondary trigger-lock">Falar com Consultor</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. DEPOIMENTOS -->
+        <section class="testimonials-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Histórias Reais de Sorrisos Transformados</h2>
+                    <p>O que dizem os pacientes Classe A que confiam em nossa coordenação multidisciplinar.</p>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"Mudei toda a minha família para a clínica. O atendimento integrado de odontopediatria para o meu filho e os meus alinhadores no mesmo andar economizou meses do meu tempo."</p>
+                        <div class="user-info">
+                            <strong>Mariana S. Menezes</strong>
+                            <span>Empresária | Nova Iguaçu</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"Minha cirurgia de implante de carga rápida foi perfeita. Sem dor, ambiente espetacular e equipe médica extremamente polida. O nível aqui é outro."</p>
+                        <div class="user-info">
+                            <strong>Dr. Roberto Alencar</strong>
+                            <span>Médico Cardiologista</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. FAQ -->
+        <section id="faq" class="faq-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Respostas para suas Dúvidas Exclusivas</h2>
+                </div>
+                <div class="faq-container">
+                    <details class="faq-item">
+                        <summary>Vocês aceitam planos de saúde/convênios convencionais?</summary>
+                        <div class="faq-content">
+                            <p>Atendemos em formato estritamente particular e livre escolha para garantir a dedicação total de tempo por paciente. Emitimos toda a documentação necessária para você solicitar o reembolso máximo junto aos planos corporativos premium (como Amil One, Bradesco Saúde Top, SulAmérica Black).</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Como funciona o atendimento multidisciplinar no mesmo dia?</summary>
+                        <div class="faq-content">
+                            <p>Agendamos blocos de horário onde os especialistas necessários (ex: Ortodontista e Periodontista) realizam a consulta de forma integrada na mesma sala, poupando deslocamentos e avaliações isoladas.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. CTA FINAL -->
+        <section class="final-cta-section section-padding">
+            <div class="container cta-box-premium">
+                <h2>Eleve a saúde e a estética bucal da sua família ao patamar máximo.</h2>
+                <p>Vagas limitadas para novos contratos mensais nesta temporada. Garanta prioridade imediata e auditoria clínica inicial sem custo.</p>
+                <button class="btn btn-primary btn-large trigger-lock">Agendar Consulta com Head Clínico</button>
+                <span class="guarantee-text">🔒 Garantia de Satisfação Estética Premium Oral Couture</span>
+            </div>
+        </section>
+    </main>
+
+    <!-- 11. FOOTER -->
+    <footer class="footer-main">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <span class="logo-title">ORAL<span class="gold-text">COUTURE</span></span>
+                <p>Odontologia Premium Multidisciplinar Familiar.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Clínica</h4>
+                <a href="#problem">Conceito</a>
+                <a href="#features">Especialidades</a>
+                <a href="#pricing">Planos</a>
+            </div>
+            <div class="footer-contact">
+                <h4>Localização</h4>
+                <p>Av. Abílio Augusto Távora, Cobertura</p>
+                <p>Centro, Nova Iguaçu - RJ</p>
+                <p>Responsável Técnico: CRO-RJ 43.240</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Oral Couture Excellence. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- TRAVA DE CONVERSÃO / MODAL DE DEMONSTRAÇÃO COMERCIAL -->
+    <div id="lockModal" class="modal-lock-overlay" aria-hidden="true">
+        <div class="modal-lock-content">
+            <div class="lock-icon">🔒</div>
+            <h2>Ambiente de Demonstração</h2>
+            <p>Esta Landing Page Premium está pronta e configurada no servidor Vercel de Homologação de Design.</p>
+            <div class="lock-status-box">
+                <p><strong>Status do Projeto:</strong> Aguardando Ativação Comercial</p>
+                <p>Para desbloquear os links reais do WhatsApp, Doctoralia, formulários de conversão e banco de dados, confirme o pagamento com o seu desenvolvedor.</p>
+            </div>
+            <div class="modal-actio
